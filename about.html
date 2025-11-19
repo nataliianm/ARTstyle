@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Про нас — Стилі в мистецтві</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    body {
+      font-family: Raleway;
+      margin: 0;
+      padding: 0;
+      background-color: FFFAF7;
+      white-space: normal;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #F9C9BD;
+    }
+    header a.logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      margin-right: 20px;
+    }
+
+    header img {
+      height: 32px;
+      margin-right: 8px;
+    }
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      background-color: #F9C9BD;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    .intro-img {
+      flex: 1;
+    }
+    .intro-img img {
+      margin: auto;
+      width: 70%;
+      padding: 10px;
+      border: 5px solid #ccc;
+      display: block;
+    }
+    main {
+      padding: 20px 40px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 40px;
+      color: #333;
+    }
+
+    p {
+      font-size: 30px;
+      line-height: 1.6;
+    }
+.socials img {
+  width: 40px;
+  margin: 0 10px;
+}
+  </style>
+
+
+</head>
+
+<body>
+
+  <header>
+    <a href="test.html" class="logo-link">
+      <img src="Group 1.png" alt="Іконка сайту">
+      <h1>Стилі в мистецтві</h1>
+    </a>
+  </header>
+
+  <nav>
+    <a href="test.html">Головна</a>
+    <a href="Ourself.html">Про нас</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Наша мета</h2>
+      <p>
+        Ми створили цей сайт з просвітницькою метою — популяризувати знання про стилі в образотворчому мистецтві.
+        Наш контент допомагає краще розуміти історію мистецтва, його розвиток та значення в культурі.
+      </p>
+      <div class="intro-img">
+        <img src="колаж 2.jpg">
+      </div>
+    </section>
+
+    <section>
+      <p>Сайт розроблено з любов’ю до мистецтва. Автор: Надич Наталія</p>
+    </section>
+
+    <section>
+      <h2>Контакти</h2>
+      <p>Email: <a href="mailto:art.styles@example.com">art.styles@examp.com</a></p>
+      <p><img id="floatingSvg" src="camera-svgrepo-com.svg" alt="camera">
+	 Instagram: <a href="https://instagram.com/your_art_page" target="_blank">@your_art_page</a></p>
+</div>
+<p>Facebook: </p>
+<div class="fb-page" 
+     data-href="https://www.facebook.com"
+     data-tabs="timeline" 
+     data-width="500" 
+     data-height="600"
+     data-small-header="false"
+     data-adapt-container-width="true"
+     data-hide-cover="false"
+     data-show-facepile="true">
+</div>
+
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
+    </section>
+  </main>
+
+<script>
+const svg = document.getElementById('floatingSvg');
+
+let t = 0;
+
+function animate() {
+  t += 0.03; 
+
+  const y = Math.sin(t) * 10; 
+
+  svg.style.transform = `translateY(${y}px)`;
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+</body>
+</html>

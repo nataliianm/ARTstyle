@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стилі в мистецтві</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+
+    body {
+      font-family: Raleway;
+      margin: 120px;
+      margin-top: 0;
+      padding: 0;
+      background-color: FFFAF7;
+      white-space: normal;
+    }
+
+    h1 {
+      font-family: 'brave_hunter', sans-serif;
+      font-size: 52px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+    }
+    p {
+      font-size: 30px;
+      font-weight: 300;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #F9C9BD;
+    }
+    header img {
+      height: 45px;
+      margin-right: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+    }
+    header h1 {
+      font-size: 55px;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #FDD8CF;
+      padding: 10px 20px;
+    }
+    nav a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    main {
+      padding: 20px 40px;
+    }
+
+    .intro {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    .intro-text {
+      flex: 2;
+      margin-right: 20px;
+    }
+    .intro-img {
+      flex: 1;
+    }
+    .intro-img img {
+      height: 1080px;
+      width: 530px;
+      border: 8px solid #ccc;
+    }
+
+    
+
+    .list{
+        list-style:none;
+        padding:0;
+    }
+    .list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .list img {
+	width: 690px;
+	height: 510px;
+	margin-right: 15;
+    }
+      
+    .text h2 {
+	margin: 0;
+	font-size: 40;
+    }
+
+@font-face {
+    font-family: 'brave_hunter'; 
+    src: url('brave_hunter/brave_huntert.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Group 1.png" alt="Іконка сайту">
+    <h1>Стилі в мистецтві</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="about.html">Про нас</a>
+  </nav>
+<div id="clockContainer">
+  <iframe src="https://free.timeanddate.com/clock/i8w1k4q5/n179/szw110/szh110/hoc000/hbw0/hfc000/cf100/hnc000/fas20/fdi70/mqc000/mqs2/mql6/mqw4/mqd84/mhc000/mhs2/mhl6/mhw4/mhd84/mmc000/mml10/mmw2/mmd84" frameborder="0" width="110" height="110"></iframe>
+</div>
+  <main>
+    <div class="intro">
+      <div class="intro-text">
+        <h1>Ласкаво просимо на сайт про художні стилі!</h1>
+        <p>
+          Мистецтво розвивалося протягом століть, змінюючи форми, техніки та підходи.
+          Від класичного реалізму до сучасного абстракціонізму — кожен стиль має свої особливості,
+          історію та вплив на культуру. Дослідіть різноманіття художніх напрямів разом з нами!
+        </p>
+      </div>
+      <div class="intro-img">
+        <img src="Spring (Alphonse Mucha, 1896).jpg" alt="Spring (Alphonse Mucha, 1896)">
+      </div>
+    </div>
+    <ul class="list">
+        <h1>Дізнайтеся про стилі в образотворчому мистецтві:</h1>
+            <li>
+		<div class="text">
+		<a href="realizm.html"><h2>Реалізм</h2></a>
+		<p>напрям в мистецтві, який в живопису виражається у відображенні дійсності без прикрас, гіперболізації та інших способів ідеалізації зображення</p>
+                </div>
+		<img src="El Ángelus (1859).jpg" alt="El Ángelus (1859)">
+            </li>            
+            <li>
+		<div class="text">
+		<a href="index.html"><h2>Імпресіонізм</h2></a>
+		<p>Мистецька течія у живописі, а також у літературі та музиці, яка виникла в 1860-х роках та остаточно сформувалася на початку XX століття у Франції.</p>
+		</div>
+            	<img src="Monet Water Lilies.jpg" alt="Monet Water Lilies">
+            </li>
+            <li>
+		<div class="text">
+		<a href="index.html"><h2>Кубізм</h2></a>
+		<p>Авангардистська течія у західноєвропейському (французькому) малярстві. Один із найвпливовіших художніх напрямів XX століття, який здійснив справжню революцію у світі мистецтва.</p>
+		</div>
+		<img src="Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien">
+            </li>
+        
+    </ul>
+
+  </main>
