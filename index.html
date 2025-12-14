@@ -134,32 +134,21 @@ body.dark button {
 
 //Карусель зображень
 
-.slider {
-    position: relative;
-    width: 400px;
-    margin: 50px auto;
+.carousel {
+  width: 400px;
+  overflow: hidden;
 }
 
-.slider img {
-    width: 100%;
-    border-radius: 10px;
+.carousel img {
+  width: 100%;
+  animation: slide 9s infinite;
 }
 
-//Кнопки
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
+@keyframes slide {
+  0% {transform: translateX(0);}
+  33% {transform: translateX(-100%);}
+  66% {transform: translateX(-200%);}
 }
-
-.prev { left: 0; }
-.next { right: 0; }
 
     @keyframes fadeUp {
       from {opacity: 0; transform: translateY(20px);}
@@ -200,14 +189,10 @@ body.dark button {
         <img src="Spring (Alphonse Mucha, 1896).jpg" alt="Spring (Alphonse Mucha, 1896)">
       </div>
     </div>
-	<div class="slider">
-    	<button class="prev" onclick="prevSlide()">❮</button>
-    	<img id="slide" src="El Ángelus (1859).jpg" alt="Слайд">
-		<img id="slide" src="Monet Water Lilies.jpg" alt="Слайд">
-		<img id="slide" src="Picasso, Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="Слайд">
-		<img id="slide" src="El Ángelus (1859).jpg" alt="Слайд">
-		<img id="slide" src="El Ángelus (1859).jpg" alt="Слайд">
-    	<button class="next" onclick="nextSlide()">❯</button>
+	<div class="carousel">
+	  <img src="Picasso, Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg">
+	  <img src="<img id="slide" src="El Ángelus (1859).jpg">
+	  <img src="Monet Water Lilies.jpg">
 	</div>
 	<script>
 		"use strict";
@@ -255,6 +240,7 @@ body.dark button {
     </ul>
 
   </main>
+
 
 
 
