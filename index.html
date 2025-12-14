@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.png" type="image/png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+  
   <link rel= "stylesheet" href= "line-awesome/1.3.0/css/line-awesome.css" >
   <style>
 
@@ -28,8 +32,9 @@
     }
 
     h1 {
-      font-family: 'Troika';
+      font-family: Montserrat;
       font-size: 70px;
+	  weight: 500;
       opacity: 0;
       transform: translateY(20px);
       animation: fadeUp 1s ease forwards;
@@ -127,6 +132,34 @@ body.dark button {
     color: #fff;
 	}
 
+//Карусель зображень
+
+.slider {
+    position: relative;
+    width: 400px;
+    margin: 50px auto;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+//Кнопки
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
 
     @keyframes fadeUp {
       from {opacity: 0; transform: translateY(20px);}
@@ -167,6 +200,34 @@ body.dark button {
         <img src="Spring (Alphonse Mucha, 1896).jpg" alt="Spring (Alphonse Mucha, 1896)">
       </div>
     </div>
+	<div class="slider">
+    	<button class="prev" onclick="prevSlide()">❮</button>
+    	<img id="slide" src="El Ángelus (1859).jpg" alt="Слайд">
+		<img id="slide" src="Monet Water Lilies.jpg" alt="Слайд">
+		<img id="slide" src="Picasso, Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="Слайд">
+		<img id="slide" src="El Ángelus (1859).jpg" alt="Слайд">
+		<img id="slide" src="El Ángelus (1859).jpg" alt="Слайд">
+    	<button class="next" onclick="nextSlide()">❯</button>
+	</div>
+	<script>
+		"use strict";
+		let images = ["img1.jpg", "img2.jpg", "img3.jpg"];
+		let index = 0;
+
+		function showSlide() {
+   			document.getElementById("slide").src = images[index];
+		}
+
+		function nextSlide() {
+    		index = (index + 1) % images.length;
+   			showSlide();
+		}	
+
+		function prevSlide() {
+		    index = (index - 1 + images.length) % images.length;
+		    showSlide();
+		}
+	</script>
     <ul class="list">
         <h1>Дізнайтеся про стилі в образотворчому мистецтві:</h1>
             <li>
@@ -194,6 +255,7 @@ body.dark button {
     </ul>
 
   </main>
+
 
 
 
