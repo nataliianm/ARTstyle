@@ -134,14 +134,39 @@ body.dark button {
 
 //Карусель зображень
 
-.carousel {
-  width: 200px;
-  overflow: hidden;
+.slider {
+    position: relative;
+    margin: 40px;              /* 🔹 відступ від краю сторінки */
+    width: 790px;
 }
 
-.carousel img {
-  width: 50%;
-  animation: slide 9s infinite;
+/* Зображення */
+.slider img {
+    width: 790px;              /* 🔹 задана ширина */
+    height: 1000px;            /* 🔹 задана висота */
+    object-fit: cover;         /* щоб зображення не спотворювалося */
+    border-radius: 10px;
+}
+
+/* Кнопки */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.prev {
+    left: 10px;               
+}
+
+.next {
+    right: 10px;
 }
 
 @keyframes slide {
@@ -189,30 +214,30 @@ body.dark button {
         <img src="Spring (Alphonse Mucha, 1896).jpg" alt="Spring (Alphonse Mucha, 1896)">
       </div>
     </div>
-	<div class="carousel">
-	  <img src="Picasso, Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg">
-	  <img src="El Ángelus (1859).jpg">
-	  <img src="Monet Water Lilies.jpg">
-	</div>
-	<script>
-		"use strict";
-		let images = ["img1.jpg", "img2.jpg", "img3.jpg"];
-		let index = 0;
+	<div class="slider">
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <img id="slide" src="Monet Water Lilies.jpg" alt="Слайд">
+    <button class="next" onclick="nextSlide()">❯</button>
+</div>
+<script>
+	  "use strict";
+let images = ["Monet Water Lilies.jpg", "El Ángelus (1859).jpg", "Picasso, Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg"];
+let index = 0;
 
-		function showSlide() {
-   			document.getElementById("slide").src = images[index];
-		}
+function showSlide() {
+    document.getElementById("slide").src = images[index];
+}
 
-		function nextSlide() {
-    		index = (index + 1) % images.length;
-   			showSlide();
-		}	
+function nextSlide() {
+    index = (index + 1) % images.length;
+    showSlide();
+}
 
-		function prevSlide() {
-		    index = (index - 1 + images.length) % images.length;
-		    showSlide();
-		}
-	</script>
+function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showSlide();
+}
+</script>
     <ul class="list">
         <h1>Дізнайтеся про стилі в образотворчому мистецтві:</h1>
             <li>
@@ -240,6 +265,7 @@ body.dark button {
     </ul>
 
   </main>
+
 
 
 
